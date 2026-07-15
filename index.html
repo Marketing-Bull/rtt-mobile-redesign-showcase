@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Large Women's Chemo — Mobile Redesign Directions · Rock The Treatment</title>
+<meta name="description" content="Three conversion-focused mobile redesign directions for the Large Women's Chemo Care Package, viewable side by side.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2720%27%20fill=%27%235ba346%27/%3E%3Ctext%20x=%2750%27%20y=%2764%27%20font-family=%27Georgia,serif%27%20font-size=%2734%27%20font-weight=%27700%27%20text-anchor=%27middle%27%20fill=%27%23fff%27%3ERTT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#e9eae4; --ink:#1a1a1a; --muted:#555; --line:#d8d9d2;
+    --a:#5ba346; --b:#ff6319; --c:#1a1a1a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--bg);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--a);text-decoration:none}
+
+  .wrap{max-width:1360px;margin:0 auto;padding:48px 24px 72px}
+
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--a)}
+  h1.title{font-family:'DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(28px,5vw,40px);line-height:1.1;margin:8px 0 8px}
+  .lead{font-size:15px;line-height:1.65;color:var(--muted);margin:0;max-width:640px}
+  .lead strong{color:var(--ink)}
+
+  /* Mobile tab switcher — hidden on wide screens where all three show at once. */
+  .tabs{
+    display:flex;gap:8px;margin:26px 0 20px;position:sticky;top:0;z-index:10;
+    padding:12px 0;background:linear-gradient(180deg,var(--bg) 78%,rgba(233,234,228,0));
+  }
+  .tab{
+    flex:1;border:1px solid var(--line);background:#fff;border-radius:12px;
+    padding:10px 8px;cursor:pointer;font-family:inherit;text-align:center;line-height:1.15;
+  }
+  .tab .id{font-weight:800;font-size:12px;color:#fff;background:#999;padding:2px 7px;border-radius:5px;display:inline-block}
+  .tab[data-tab="1a"] .id{background:var(--a)}
+  .tab[data-tab="1b"] .id{background:var(--b)}
+  .tab[data-tab="1c"] .id{background:var(--c)}
+  .tab .nm{display:block;font-size:12.5px;font-weight:600;color:#555;margin-top:6px}
+  .tab.is-active{border-color:var(--ink);box-shadow:0 4px 14px -8px rgba(0,0,0,.4)}
+  .tab.is-active .nm{color:var(--ink)}
+
+  .frames{display:flex;flex-wrap:wrap;gap:40px;justify-content:center}
+
+  .frame{display:flex;flex-direction:column;gap:14px;width:412px;max-width:100%}
+  .frame .label{display:flex;align-items:baseline;gap:10px}
+  .frame .label .id{font-weight:800;font-size:13px;color:#fff;padding:3px 9px;border-radius:6px}
+  .frame[data-panel="1a"] .label .id{background:var(--a)}
+  .frame[data-panel="1b"] .label .id{background:var(--b)}
+  .frame[data-panel="1c"] .label .id{background:var(--c)}
+  .frame .label .nm{font-family:'DM Serif Display',serif;font-size:20px;color:var(--ink)}
+  .frame .desc{font-size:13px;line-height:1.5;color:#666;margin:0}
+
+  .device{
+    width:100%;background:#111;border-radius:46px;padding:12px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.45);
+  }
+  .device iframe{
+    width:100%;height:812px;border:0;border-radius:34px;background:#fff;display:block;
+  }
+  .open{font-size:12.5px;font-weight:600;color:#4a8a38}
+  .open:hover{text-decoration:underline}
+
+  /* Phones/tablets: one phone at a time via tabs. */
+  @media (max-width:1299px){
+    .frames .frame{display:none}
+    .frames .frame.is-active{display:flex}
+    .device iframe{height:min(760px, calc(100vh - 150px))}
+  }
+  /* Wide desktop: show all three, hide the tab switcher. */
+  @media (min-width:1300px){
+    .tabs{display:none}
+    .frames .frame{display:flex !important}
+  }
+  @media (max-width:460px){
+    .wrap{padding:32px 14px 56px}
+    .device{border-radius:40px;padding:10px}
+    .device iframe{border-radius:30px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Large Women's Chemo Care Package · $159.99</div>
+  <h1 class="title">Three mobile redesign directions</h1>
+  <p class="lead">Each is a <strong>live, full-length mobile product page</strong> — scroll it end to end, tap the gallery thumbnails, change quantity, open the FAQs, and note the always-visible sticky Add-to-Cart bar the current site is missing. On a phone, tap a tab to switch directions or open any one full-screen.</p>
+
+  <div class="tabs" role="tablist" aria-label="Choose a redesign direction">
+    <button class="tab is-active" data-tab="1a" role="tab" aria-selected="true"><span class="id">1a</span><span class="nm">Emotional Gift</span></button>
+    <button class="tab" data-tab="1b" role="tab" aria-selected="false"><span class="id">1b</span><span class="nm">High-Conversion</span></button>
+    <button class="tab" data-tab="1c" role="tab" aria-selected="false"><span class="id">1c</span><span class="nm">What's Inside</span></button>
+  </div>
+
+  <div class="frames">
+    <div class="frame is-active" data-panel="1a">
+      <div class="label"><span class="id">1a</span><span class="nm">Emotional Gift</span></div>
+      <p class="desc">Warm, editorial, gift-first. Leads with feeling, not features — for buyers who don't know what to say.</p>
+      <div class="device"><iframe src="1a.html" title="1a — Emotional Gift redesign" loading="lazy"></iframe></div>
+      <a class="open" href="1a.html" target="_blank" rel="noopener">Open full screen ↗</a>
+    </div>
+
+    <div class="frame" data-panel="1b">
+      <div class="label"><span class="id">1b</span><span class="nm">High-Conversion</span></div>
+      <p class="desc">Punchy and direct. Value stack, live ship-cutoff urgency, price anchoring, bold orange CTA. Built for paid traffic.</p>
+      <div class="device"><iframe src="1b.html" title="1b — High-Conversion redesign" loading="lazy"></iframe></div>
+      <a class="open" href="1b.html" target="_blank" rel="noopener">Open full screen ↗</a>
+    </div>
+
+    <div class="frame" data-panel="1c">
+      <div class="label"><span class="id">1c</span><span class="nm">What's Inside</span></div>
+      <p class="desc">Transparency as trust. Shows the full haul up front so the $159.99 feels obviously worth it. Calm and confident.</p>
+      <div class="device"><iframe src="1c.html" title="1c — What's Inside redesign" loading="lazy"></iframe></div>
+      <a class="open" href="1c.html" target="_blank" rel="noopener">Open full screen ↗</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var tabs = document.querySelectorAll('.tab');
+    var frames = document.querySelectorAll('.frame');
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(){
+        var id = tab.getAttribute('data-tab');
+        tabs.forEach(function(t){
+          var on = t === tab;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        frames.forEach(function(f){
+          f.classList.toggle('is-active', f.getAttribute('data-panel') === id);
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
